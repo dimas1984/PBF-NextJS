@@ -1,5 +1,8 @@
+import { useRouter } from "next/router";
 import Navbar from "../navbar";
 
+
+const disableNavbar = ['/auth/login', '/auth/register'];
 
 /*
 Mendefinisikan tipe props menggunakan TypeScript
@@ -20,15 +23,19 @@ const AppShell = (props:AppShellProps) => {
 */
 const AppShell = (props:AppShellProps) => {
   
+  
   /*
   const { children } = props;
   - Mengambil nilai children dari props
   - Memudahkan pemanggilan tanpa menulis props.children
   */
   const { children } = props;
+  const {pathname} = useRouter();
+  // const router = useRouter();
+  // console.log(router);
   return (
   <main>
-    <Navbar />
+    {!disableNavbar.includes(pathname) && <Navbar />}
     {children}
  
   </main>
