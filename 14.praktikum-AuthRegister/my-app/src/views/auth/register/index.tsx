@@ -31,7 +31,7 @@ const TampilanRegister = () => {
     } else {
       setIsLoading(false);
       setError(
-        response.status === 400 ? "User already exists" : "An error occurred",
+        response.status === 400 ? "Email already exists" : "An error occurred",
       );
     }
   };
