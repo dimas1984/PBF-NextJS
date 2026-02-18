@@ -10,7 +10,6 @@ caranya
 * npm run dev
 
 
-
 jika tsconfig terjadi problem solusinya
 
 * npm install --save-dev typescript @types/react @types/react-dom
