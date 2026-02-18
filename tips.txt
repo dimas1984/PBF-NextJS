@@ -1,10 +1,1 @@
-outline
-Fokus praktikum
-pertemuan 1	Fundamental	1–3
-pertemuan 2	Routing & Layout	4–6
-pertemuan 3	Rendering & SEO	7–9
-pertemuan 4	Data & Dynamic Route	10–11
-pertemuan 5	UX & Error	12–14
-pertemuan 6	Security & Optimasi	15–17
-pertemuan 7	Deployment	18–19
-pertemuan 8	Final Project	20
+
