@@ -1,7 +1,8 @@
-import { signIn } from "@/utils/db/servicefirebase";
+import { signIn, signInWithGoogle } from "@/utils/db/servicefirebase";
 import NextAuth, { NextAuthOptions } from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
+import GoogleProvider from "next-auth/providers/google";
 
 export const authOptions: NextAuthOptions = {
   session: {
@@ -39,6 +40,10 @@ export const authOptions: NextAuthOptions = {
         return null;
       },
     }),
+    GoogleProvider({
+      clientId: process.env.GOOGLE_CLIENT_ID || "",
+      clientSecret: process.env.GOOGLE_CLIENT_SECRET || "",
+    }),
   ],
 
   callbacks: {
@@ -48,7 +53,27 @@ export const authOptions: NextAuthOptions = {
         token.fullname = user.fullname;
         token.role = user.role;
       }
-      //  console.log("jwt callback", { token, account, profile, user })
+
+      // Jika login dengan Google, tambahkan informasi yang diperlukan ke token
+      if (account?.provider === "google") {
+        const data = {
+          fullname: user.name,
+          email: user.email,
+          image: user.image,
+          type: account.provider,
+        };
+
+        await signInWithGoogle(data, (result: any) => {
+          // Pastikan mengecek result.status sesuai dengan object yang dikirim
+          if (result.status) {
+            token.fullname = result.data.fullname;
+            token.email = result.data.email;
+            token.image = result.data.image;
+            token.type = result.data.type;
+            token.role = result.data.role;
+          }
+        });
+      }
       return token;
     },
     async session({ session, token }: any) {
@@ -58,8 +83,14 @@ export const authOptions: NextAuthOptions = {
       if (token.fullname) {
         session.user.fullname = token.fullname;
       }
+      if (token.image) {
+        session.user.image = token.image;
+      }
       if (token.role) {
         session.user.role = token.role;
+      }
+      if (token.type) {
+        session.user.type = token.type;
       }
       // console.log("session callback", { session, token })
       return session;

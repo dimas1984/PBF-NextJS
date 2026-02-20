@@ -77,8 +77,27 @@
   .navbar__brand {
     font-size: 18px;
   }
-
-  .navbar__user {
-    display: none;
-  }
 }
+  .navbar__user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0.95;
+  }
+  /* Avatar image */
+  .navbar__user__image {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3b82f6;
+    box-shadow: 0 0 10px rgba(59, 130, 246, 0.4);
+    transition: all 0.3s ease;
+  }
+
+  .navbar__user__image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+  }

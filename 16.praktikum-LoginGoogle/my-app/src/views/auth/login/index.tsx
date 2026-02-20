@@ -14,33 +14,6 @@ const Tampilanlogin = () => {
     event.preventDefault();
     setError("");
     setIsLoading(true);
-
-    //const form = event.currentTarget;
-    // const formData = new FormData(event.currentTarget);
-    // const email = formData.get("email") as string;
-    // const fullname = formData.get("Fullname") as string;
-    // const password = formData.get("Password") as string;
-
-    // const response = await fetch("/api/login", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify({ email, fullname, password }),
-    // });
-    // // const result = await response.json();
-    // // console.log(result);
-    // if (response.status === 200) {
-    //   form.reset();
-    //   // event.currentTarget.reset();
-    //   setIsLoading(false);
-    //   push("/auth/login");
-    // } else {
-    //   setIsLoading(false);
-    //   setError(
-    //     response.status === 400 ? "Email already exists" : "An error occurred",
-    //   );
-    // }
     try {
       const res = await signIn("credentials", {
         redirect: false,
@@ -64,7 +37,7 @@ const Tampilanlogin = () => {
   };
 
   return (
-   <>
+    <>
       <div className={style.login}>
         {error && <p className={style.login__error}>{error}</p>}
         <h1 className={style.login__title}>Halaman login</h1>
@@ -82,7 +55,6 @@ const Tampilanlogin = () => {
                 className={style.login__form__item__input}
               />
             </div>
-
             <div className={style.login__form__item}>
               <label
                 htmlFor="Password"
@@ -104,6 +76,14 @@ const Tampilanlogin = () => {
               disabled={isLoading}
             >
               {isLoading ? "Loading..." : "login"}
+            </button>{" "}
+            <br /> <br />
+            <button
+              onClick={() => signIn("google", { callbackUrl, redirect: false })}
+              className={style.login__form__item__button}
+              disabled={isLoading}
+            >
+              {isLoading ? "Loading..." : "sign in with google"}
             </button>
           </form>
           <br />
@@ -113,7 +93,7 @@ const Tampilanlogin = () => {
           </p>
         </div>
       </div>
-   </>
+    </>
   );
 };
 
