@@ -1,162 +1,171 @@
-📘 OUTLINE MATA KULIAH
-Pemrograman Framework – Next.js Project Based Learning
+**📘 OUTLINE PRAKTIKUM (8 PERTEMUAN)**
 
-📅 Pertemuan 1 – Fundamental (Praktikum 1–3)
-Praktikum 1
+**Mata Kuliah: Pemrograman Berbasis Framework (Next.js)**
 
-Pengenalan Next.js
+**🔹 Pertemuan 1 – Setup Project & Fundamental Routing**
 
-Instalasi dengan create-next-app
+**✅ Jobsheet yang digunakan:**
 
-Struktur folder App Router
+1.  **2_JOBSHEET PRAKTIKUM – SetupProject**
+2.  **3_JOBSHEET PRAKTIKUM – PageDanLayout**
+3.  **4_JOBSHEET PRAKTIKUM – LinkNavigation**
 
-Menjalankan development server
+**🎯 Fokus Materi:**
 
-Praktikum 2
+- Instalasi & inisialisasi project Next.js
+- Struktur folder project
+- Konsep pages & layout
+- Navigasi antar halaman
+- Dynamic routing dasar
 
-Konsep Server Component
+**🛠 Output:**
 
-Fetching data dari Jikan API
+Website multi-halaman sederhana dengan navigasi aktif.
 
-Rendering data di halaman utama
+**🔹 Pertemuan 2 – Styling & Custom Document**
 
-Praktikum 3
+**✅ Jobsheet yang digunakan:**
 
-Pengenalan Tailwind CSS
+1.  **5_JOBSHEET PRAKTIKUM – Styling**
+2.  **6_JOBSHEET PRAKTIKUM – CustomError&document**
 
-Styling komponen card anime
+**🎯 Fokus Materi:**
 
-Layout dasar (flex, grid)
+- CSS Module
+- Global CSS
+- SCSS
+- Custom \_document.js
+- Custom error page (404)
+- Pengaturan global HTML
 
-📅 Pertemuan 2 – Routing & Layout (Praktikum 4–6)
-Praktikum 4
+**🛠 Output:**
 
-Konsep Layout di App Router
+Website dengan styling konsisten + halaman error custom.
 
-Nested Layout
+**🔹 Pertemuan 3 – API Routes & Client-Side Rendering**
 
-Pembuatan Navbar
+**✅ Jobsheet yang digunakan:**
 
-Praktikum 5
+1.  **7_JOBSHEET PRAKTIKUM – APIroutes**
+2.  **8_JOBSHEET PRAKTIKUM – ClientSide Rendering**
 
-Sistem Routing berbasis folder
+**🎯 Fokus Materi:**
 
-Dynamic navigasi dengan <Link>
+- Membuat API internal di Next.js
+- Fetch data menggunakan useEffect
+- Konsep Client-Side Rendering (CSR)
 
-Struktur halaman (about, anime, dll.)
+**🛠 Output:**
 
-Praktikum 6
+Halaman yang menampilkan data dari API internal.
 
-Konsistensi UI
+**🔹 Pertemuan 4 – Server-Side Rendering & Static Generation**
 
-Reusable Components
+**✅ Jobsheet yang digunakan:**
 
-Struktur folder yang rapi
+1.  **9_JOBSHEET PRAKTIKUM – ServerSide Rendering**
+2.  **10_JOBSHEET PRAKTIKUM – StaticSideGeneration**
 
-📅 Pertemuan 3 – Rendering & SEO (Praktikum 7–9)
-Praktikum 7
+**🎯 Fokus Materi:**
 
-Perbedaan Server vs Client Components
+- getServerSideProps
+- getStaticProps
+- Perbandingan SSR vs SSG
+- Studi kasus penggunaan
 
-Penggunaan "use client"
+**🛠 Output:**
 
-State dan interaktivitas
+2 halaman berbeda: satu SSR dan satu SSG.
 
-Praktikum 8
+**🔹 Pertemuan 5 – Dynamic Routing & ISR**
 
-Implementasi fitur Search
+**✅ Jobsheet yang digunakan:**
 
-Sinkronisasi input dan state
+1.  **11_JOBSHEET PRAKTIKUM – DynamicRouting**
+2.  **12_JOBSHEET PRAKTIKUM – Incremental_static_regeneration**
 
-Filtering data anime
+**🎯 Fokus Materi:**
 
-Praktikum 9
+- Dynamic route parameter
+- getStaticPaths
+- ISR dengan revalidate
 
-Metadata API
+**🛠 Output:**
 
-SEO dasar (title & description)
+Halaman detail dinamis dengan update otomatis (ISR).
 
-Dynamic metadata untuk halaman anime
+**🔹 Pertemuan 6 – Middleware & Route Protection**
 
-📅 Pertemuan 4 – Data & Dynamic Route (Praktikum 10–11)
-Praktikum 10
+**✅ Jobsheet yang digunakan:**
 
-Dynamic Routing (/anime/[id])
+1.  **13_JOBSHEET PRAKTIKUM – Middleware & Route Protection**
+2.  **14_JOBSHEET PRAKTIKUM – Sistem Autentikasi & Proteksi Route**
 
-Struktur folder dynamic route
+**🎯 Fokus Materi:**
 
-Praktikum 11
+- Konsep middleware
+- Proteksi halaman
+- Redirect jika belum login
+- Session handling
 
-Fetch data berdasarkan parameter ID
+**🛠 Output:**
 
-Integrasi trailer anime
+Dashboard hanya bisa diakses setelah login.
 
-Detail page rendering
+**🔹 Pertemuan 7 – Authentication & Multi Role System**
 
-📅 Pertemuan 5 – UX & Error Handling (Praktikum 12–14)
-Praktikum 12
+**✅ Jobsheet yang digunakan:**
 
-Implementasi Pagination
+1.  **15_JOBSHEET PRAKTIKUM – AuthRegister (databaseIntegration)**
+2.  **16_JOBSHEET PRAKTIKUM – Implementasi Login Database & Multi-Role**
+3.  **17_JOBSHEET PRAKTIKUM – Implementasi Login Google Provider**
 
-Navigasi halaman koleksi anime
+**🎯 Fokus Materi:**
 
-Praktikum 13
+- Integrasi database
+- Register & login
+- Role-based access control
+- OAuth Google Provider
 
-Loading UI (loading.tsx)
+**🛠 Output:**
 
-Global Error Handling (error.tsx)
+Sistem autentikasi lengkap + multi-role + login Google.
 
-Praktikum 14
+**🔹 Pertemuan 8 – Optimization & Unit Testing**
 
-Elemen interaktif (Pop-up / Modal)
+**✅ Jobsheet yang digunakan:**
 
-Animasi dan transisi UI
+1.  **18_JOBSHEET PRAKTIKUM – Optimize**
+2.  **19_JOBSHEET PRAKTIKUM – Unit Testing**
 
-📅 Pertemuan 6 – Security & Optimasi (Praktikum 15–17)
-Praktikum 15
+**🎯 Fokus Materi:**
 
-Setup NextAuth.js
+- Optimasi performa Next.js
+- next/image
+- Lazy loading
+- Basic unit testing
 
-Login dengan GitHub Provider
+**🛠 Output:**
 
-Praktikum 16
+Aplikasi teroptimasi + memiliki unit test sederhana.
 
-Middleware
+**📊 REKAP PEMETAAN JOBSHEET**
 
-Proteksi halaman tertentu (authenticated route)
+| **Pertemuan** | **Topik** | **Jobsheet** |
+| --- | --- | --- |
+| 1   | Setup & Routing | 2, 3, 4 |
+| 2   | Styling & Document | 5, 6 |
+| 3   | API & CSR | 7, 8 |
+| 4   | SSR & SSG | 9, 10 |
+| 5   | Dynamic & ISR | 11, 12 |
+| 6   | Middleware & Proteksi | 13, 14 |
+| 7   | Auth & Multi Role | 15, 16, 17 |
+| 8   | Optimize & Testing | 18, 19 |
 
-Praktikum 17
+**📊 Pertemuan 9 - UTS**
 
-Optimasi gambar dengan next/image
+- - **Presentasi tugas-tugas yang ada di tiap2 jobsheet dan membuat web sederhana**
 
-Integrasi Firebase Firestore
+**📊 Pertemuan 10 - 16**
 
-Fitur komentar atau koleksi anime
-
-📅 Pertemuan 7 – Deployment (Praktikum 18–19)
-Praktikum 18
-
-Environment Variables
-
-API Keys & Auth Secret
-
-Konfigurasi produksi
-
-Praktikum 19
-
-Build project
-
-Deployment ke Vercel
-
-Testing production
-
-📅 Pertemuan 8 – Final Project (Praktikum 20)
-Praktikum 20
-
-Penyempurnaan fitur
-
-Debugging akhir
-
-UI Polish
-
-Presentasi proyek 
+- - **PBL**
